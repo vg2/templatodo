@@ -3,4 +3,5 @@ export type TodoItem = {
     description: string;
     timeOfDay: string;
     durationInMinutes: number;
+    note: string;
 }
