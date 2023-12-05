@@ -9,6 +9,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblyContaining<Program>());
+
 var primaryDbConnectionString = builder.Configuration.GetConnectionString("PrimaryDatabase") ?? throw new ArgumentNullException("No connection string provided");
 builder.Services.AddScoped((_) => new TemplatodoContext(primaryDbConnectionString));
 
