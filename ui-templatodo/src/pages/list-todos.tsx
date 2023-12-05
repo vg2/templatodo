@@ -3,7 +3,6 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Template } from "@/data/template";
-import { cn } from "@/lib/utils";
 
 const ListTodos = () => {
     const templates: Template[] = [
