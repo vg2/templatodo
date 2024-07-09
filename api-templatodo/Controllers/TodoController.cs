@@ -14,4 +14,7 @@ public class TodoController : ControllerBase
 
     [HttpGet("today")]
     public async Task<IEnumerable<TemplateToday>> Get(CancellationToken cancellationToken = default) => await this.mediator.Send(new TemplatesTodayQuery(), cancellationToken);
+
+    [HttpPost("dodgy")]
+    public async Task DoDodgyThing() => throw new NotImplementedException();
 }
